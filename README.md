@@ -15,6 +15,16 @@ The final pipeline produces:
 - Automated data-quality and business-rule tests
 - Reconciled outputs across DuckDB and Snowflake implementations
 
+## Highlights
+
+- Processed 307,511 applicants across application, credit-history, and installment-payment datasets
+- Built a layered Snowflake + dbt analytics pipeline with staging, intermediate, scoring, segmentation, and mart layers
+- Developed applicant-level financial risk scores from 0 to 100 using repayment behavior and affordability features
+- Created five reusable analytical marts for portfolio-level risk analysis
+- Implemented 60 dbt tests and custom business-rule validations
+- Achieved a full dbt build with 75/75 successful operations
+- Reconciled Snowflake + dbt outputs against the original DuckDB pipeline
+
 ## Architecture
 
 ```text
