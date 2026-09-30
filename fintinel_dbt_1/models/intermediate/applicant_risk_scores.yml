@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: applicant_risk_scores
+    description: >
+      Applicant-level Fintinel risk scoring model combining historical
+      repayment behavior and current affordability burden into a 0-100 score.
+
+    columns:
+      - name: SK_ID_CURR
+        data_tests:
+          - not_null
+          - unique
+
+      - name: SCORE_STATUS
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Full score
+                  - No repayment history
+                  - No observed payments
+                  - Missing affordability data
+
+      - name: RISK_SCORE
+        description: Combined Fintinel risk score from 0 to 100 when scoreable.
+
+      - name: BEHAVIOR_SCORE
+        description: Repayment behavior component contributing up to 70 points.
+
+      - name: AFFORDABILITY_SCORE
+        description: Affordability burden component contributing up to 30 points.

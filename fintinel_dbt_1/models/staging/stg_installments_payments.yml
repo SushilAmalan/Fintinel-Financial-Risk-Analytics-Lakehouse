@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_installments_payments
+    description: >
+      Staging model for installment-level payment history associated with
+      previous credit applications and current applicants.
+
+    columns:
+      - name: SK_ID_PREV
+        description: Identifier for the previous credit application.
+        data_tests:
+          - not_null
+
+      - name: SK_ID_CURR
+        description: Identifier for the current applicant.
+        data_tests:
+          - not_null
+
+      - name: NUM_INSTALMENT_NUMBER
+        description: Scheduled installment sequence number.
+
+      - name: DAYS_INSTALMENT
+        description: Scheduled installment date represented as days relative to the application reference date.
+
+      - name: DAYS_ENTRY_PAYMENT
+        description: Actual payment date represented as days relative to the application reference date.
+
+      - name: AMT_INSTALMENT
+        description: Scheduled installment amount.
+
+      - name: AMT_PAYMENT
+        description: Actual amount paid.

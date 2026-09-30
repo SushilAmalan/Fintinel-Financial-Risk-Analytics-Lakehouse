@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int_customer_repayment_history
+    description: >
+      Customer-level repayment history aggregated across previous credits.
+
+    columns:
+      - name: SK_ID_CURR
+        data_tests:
+          - not_null
+          - unique

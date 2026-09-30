@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_previous_application
+    description: >
+      Staging model for historical credit applications associated with
+      current applicants.
+
+    columns:
+      - name: SK_ID_PREV
+        description: Unique identifier for a previous credit application.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: SK_ID_CURR
+        description: Identifier linking the previous application to the current applicant.
+        data_tests:
+          - not_null
+
+      - name: AMT_CREDIT
+        description: Credit amount associated with the previous application.
+
+      - name: AMT_ANNUITY
+        description: Annuity amount associated with the previous application.
+
+      - name: CNT_PAYMENT
+        description: Number of scheduled payments for the previous application.
+
+      - name: NAME_CONTRACT_STATUS
+        description: Status of the previous credit application.

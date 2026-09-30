@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_application_train
+    description: >
+      Staging model for current applicant-level application data from the
+      Home Credit application_train source.
+
+    columns:
+      - name: SK_ID_CURR
+        description: Unique identifier for the current applicant.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: TARGET
+        description: Binary target indicating the observed credit outcome.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+      - name: AMT_INCOME_TOTAL
+        description: Applicant total income.
+
+      - name: AMT_CREDIT
+        description: Credit amount requested or granted for the current application.
+
+      - name: AMT_ANNUITY
+        description: Loan annuity amount.
+
+      - name: EXT_SOURCE_1
+        description: External normalized risk score.
+
+      - name: EXT_SOURCE_2
+        description: External normalized risk score.
+
+      - name: EXT_SOURCE_3
+        description: External normalized risk score.

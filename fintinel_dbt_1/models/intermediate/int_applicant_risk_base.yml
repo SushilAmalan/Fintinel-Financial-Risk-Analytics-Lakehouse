@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: int_applicant_risk_base
+    description: >
+      Applicant-level base combining current application attributes with
+      historical repayment behavior where available.
+
+    columns:
+      - name: SK_ID_CURR
+        data_tests:
+          - not_null
+          - unique
+
+      - name: TARGET
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+      - name: HAS_REPAYMENT_HISTORY
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]

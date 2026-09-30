@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: int_applicant_risk_features
+    description: >
+      Applicant-level derived affordability and historical repayment-risk
+      features used as inputs to Fintinel scoring.
+
+    columns:
+      - name: SK_ID_CURR
+        data_tests:
+          - not_null
+          - unique
+
+      - name: CREDIT_INCOME_RATIO
+        description: Current credit amount divided by total applicant income.
+
+      - name: ANNUITY_INCOME_RATIO
+        description: Current annuity amount divided by total applicant income.
+
+      - name: AFFORDABILITY_SEGMENT
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Low burden
+                  - Moderate burden
+                  - Elevated burden
+                  - High burden
+                  - Unknown
+
+      - name: REPAYMENT_SEGMENT
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - No history
+                  - No observed payments
+                  - Clean observed history
+                  - Observed repayment issue
+
+      - name: REPAYMENT_PATTERN
+        data_tests:
+          - not_null
+
+      - name: LATE_PAYMENT_SEVERITY
+        data_tests:
+          - not_null
+
+      - name: UNDERPAYMENT_SEVERITY
+        data_tests:
+          - not_null

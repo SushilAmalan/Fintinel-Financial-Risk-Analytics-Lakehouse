@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: mart_score_distribution
+    description: >
+      Distribution of scored applicants across exact Fintinel risk-score values
+      with corresponding risk tiers and target outcomes.
+
+    columns:
+      - name: RISK_SCORE
+        data_tests:
+          - not_null
+
+      - name: RISK_TIER
+        data_tests:
+          - not_null
+
+      - name: APPLICANTS
+        data_tests:
+          - not_null
+
+      - name: PCT_OF_SCORED_APPLICANTS
+        data_tests:
+          - not_null

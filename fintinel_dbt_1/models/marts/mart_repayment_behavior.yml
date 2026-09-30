@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: mart_repayment_behavior
+    description: >
+      Portfolio mart summarizing repayment-pattern combinations together with
+      late-payment and underpayment severity.
+
+    columns:
+      - name: REPAYMENT_PATTERN
+        data_tests:
+          - not_null
+
+      - name: LATE_PAYMENT_SEVERITY
+        data_tests:
+          - not_null
+
+      - name: UNDERPAYMENT_SEVERITY
+        data_tests:
+          - not_null
+
+      - name: APPLICANTS
+        data_tests:
+          - not_null

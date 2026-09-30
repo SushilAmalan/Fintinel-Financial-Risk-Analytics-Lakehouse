@@ -1,0 +1,116 @@
+project:
+  name: Fintinel
+  stage: data_cleaning
+
+application:
+  primary_key:
+    - SK_ID_CURR
+
+  required_fields:
+    - SK_ID_CURR
+    - TARGET
+    - AMT_INCOME_TOTAL
+    - AMT_CREDIT
+    - AMT_ANNUITY
+
+  rules:
+    SK_ID_CURR:
+      allow_null: false
+
+    TARGET:
+      allow_null: false
+      allowed_values:
+        - 0
+        - 1
+
+    AMT_INCOME_TOTAL:
+      allow_negative: false
+
+    AMT_CREDIT:
+      allow_negative: false
+
+    AMT_ANNUITY:
+      allow_negative: false
+      allow_null: true
+      imputation: none
+
+
+previous_application:
+  identifiers:
+    - SK_ID_CURR
+    - SK_ID_PREV
+
+  required_fields:
+    - SK_ID_CURR
+    - SK_ID_PREV
+    - NAME_CONTRACT_TYPE
+    - AMT_APPLICATION
+    - AMT_CREDIT
+    - NAME_CONTRACT_STATUS
+    - AMT_ANNUITY
+    - DAYS_DECISION
+
+  rules:
+    SK_ID_CURR:
+      allow_null: false
+
+    SK_ID_PREV:
+      allow_null: false
+
+    AMT_APPLICATION:
+      allow_negative: false
+
+    AMT_CREDIT:
+      allow_negative: false
+      allow_null: true
+      imputation: none
+
+    AMT_ANNUITY:
+      allow_null: true
+      imputation: none
+
+installments:
+  identifiers:
+    - SK_ID_CURR
+    - SK_ID_PREV
+
+  required_fields:
+    - SK_ID_CURR
+    - SK_ID_PREV
+    - DAYS_INSTALMENT
+    - DAYS_ENTRY_PAYMENT
+    - AMT_INSTALMENT
+    - AMT_PAYMENT
+
+  rules:
+    SK_ID_CURR:
+      allow_null: false
+
+    SK_ID_PREV:
+      allow_null: false
+
+    DAYS_INSTALMENT:
+      allow_negative: true
+
+    DAYS_ENTRY_PAYMENT:
+      allow_negative: true
+      allow_null: true
+      imputation: none
+
+    AMT_INSTALMENT:
+      allow_negative: false
+
+    AMT_PAYMENT:
+      allow_negative: false
+      allow_null: true
+      imputation: none
+
+relationships:
+  current_to_previous:
+    key:
+      - SK_ID_CURR
+
+  previous_to_installments:
+    key:
+      - SK_ID_CURR
+      - SK_ID_PREV

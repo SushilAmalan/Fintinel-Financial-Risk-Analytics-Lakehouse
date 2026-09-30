@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: mart_score_availability
+    description: >
+      Portfolio-level summary of Fintinel score availability, including
+      scored and unscored applicant populations and reasons a score is unavailable.
+
+    columns:
+      - name: SCORE_STATUS
+        data_tests:
+          - not_null
+          - unique
+          - accepted_values:
+              arguments:
+                values:
+                  - Full score
+                  - No repayment history
+                  - No observed payments
+                  - Missing affordability data
+
+      - name: APPLICANTS
+        data_tests:
+          - not_null
+
+      - name: SCORED_APPLICANTS
+        data_tests:
+          - not_null
+
+      - name: UNSCORED_APPLICANTS
+        data_tests:
+          - not_null

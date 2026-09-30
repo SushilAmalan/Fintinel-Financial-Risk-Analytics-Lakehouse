@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: mart_risk_tier_summary
+    description: >
+      Portfolio-level summary of Fintinel applicant risk tiers,
+      score coverage, and target outcomes.
+
+    columns:
+      - name: RISK_TIER
+        data_tests:
+          - not_null
+          - unique
+
+      - name: APPLICANTS
+        data_tests:
+          - not_null
+
+      - name: PCT_OF_TOTAL_APPLICANTS
+        data_tests:
+          - not_null

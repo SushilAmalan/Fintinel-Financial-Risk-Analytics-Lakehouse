@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw
+    database: FINTINEL
+    schema: RAW
+    description: Raw Home Credit source data loaded into Snowflake.
+
+    tables:
+      - name: application_train
+        identifier: APPLICATION_TRAIN
+        description: Current applicant-level application and credit attributes.
+
+      - name: previous_application
+        identifier: PREVIOUS_APPLICATION
+        description: Historical credit applications associated with applicants.
+
+      - name: installments_payments
+        identifier: INSTALLMENTS_PAYMENTS
+        description: Historical installment-level payment behavior.

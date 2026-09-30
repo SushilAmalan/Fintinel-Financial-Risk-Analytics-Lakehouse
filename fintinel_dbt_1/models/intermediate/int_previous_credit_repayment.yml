@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_previous_credit_repayment
+    description: >
+      Previous-credit-level repayment behavior aggregated from installment events.
+
+    columns:
+      - name: SK_ID_PREV
+        data_tests:
+          - not_null
+          - unique
+
+      - name: SK_ID_CURR
+        data_tests:
+          - not_null

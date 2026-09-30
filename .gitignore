@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# dbt artifacts
+target/
+dbt_packages/
+logs/
+
+# Secrets and environment files
+secrets/
+*.p8
+*.pem
+.env
+.env.*
+
+# Raw and generated data
+data/raw/
+data/cleaned/
+data/rejected/
+data/output/
+
+# Local database / warehouse files
+warehouse/
+
+# OS files
+.DS_Store
+Thumbs.db

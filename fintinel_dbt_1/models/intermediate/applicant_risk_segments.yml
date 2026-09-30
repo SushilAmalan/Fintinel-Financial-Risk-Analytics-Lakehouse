@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: applicant_risk_segments
+    description: >
+      Applicant-level Fintinel risk segmentation assigning risk tiers
+      to validated risk scores.
+
+    columns:
+      - name: SK_ID_CURR
+        data_tests:
+          - not_null
+          - unique
+
+      - name: RISK_TIER
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Low
+                  - Moderate
+                  - Elevated
+                  - High
+                  - Unavailable
+
+      - name: SCORE_STATUS
+        data_tests:
+          - not_null
+
+      - name: RISK_SCORE
+        description: Fintinel composite risk score from 0 to 100 when available.
