@@ -50,3 +50,20 @@ Risk Segmentation
     |
     v
 Analytical Marts
+
+```
+## Workflow Orchestration
+
+Apache Airflow orchestrates the Fintinel analytics pipeline through a dependency-based DAG.
+
+```text
+Source File Validation
+        |
+        v
+Snowflake Raw Upload
+        |
+        v
+dbt Build
+        |
+        v
+Final Data Quality Validation
