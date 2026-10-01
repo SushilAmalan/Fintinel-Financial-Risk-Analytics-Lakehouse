@@ -1,0 +1,19 @@
+﻿AFFORDABILITY_SEGMENT,REPAYMENT_SEGMENT,APPLICANTS,PCT_OF_TOTAL_APPLICANTS,SCORED_APPLICANTS,TARGET_1_COUNT,TARGET_1_RATE,AVG_RISK_SCORE
+Low burden,Clean observed history,32242,10.4848,32242,1921,5.9581,0.00
+Elevated burden,Observed repayment issue,40014,13.0122,40014,3967,9.9140,58.79
+Low burden,No history,4965,1.6146,0,295,5.9416,
+Moderate burden,No observed payments,1,0.0003,0,0,0.0000,
+Low burden,Observed repayment issue,39736,12.9218,39736,3396,8.5464,37.97
+Moderate burden,No history,3797,1.2348,0,249,6.5578,
+High burden,No history,3407,1.1079,0,187,5.4887,
+High burden,Clean observed history,35325,11.4874,35325,2526,7.1507,30.00
+Unknown,Clean observed history,2,0.0007,0,0,0.0000,
+High burden,Observed repayment issue,38087,12.3856,38087,3879,10.1846,69.35
+Low burden,No observed payments,3,0.0010,0,0,0.0000,
+Elevated burden,No observed payments,3,0.0010,0,0,0.0000,
+High burden,No observed payments,1,0.0003,0,1,100.0000,
+Moderate burden,Clean observed history,32739,10.6464,32739,2174,6.6404,10.00
+Elevated burden,Clean observed history,33239,10.8090,33239,2384,7.1723,20.00
+Moderate burden,Observed repayment issue,40241,13.0860,40241,3628,9.0157,48.73
+Elevated burden,No history,3699,1.2029,0,218,5.8935,
+Unknown,Observed repayment issue,10,0.0033,0,0,0.0000,

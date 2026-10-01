@@ -1,0 +1,28 @@
+﻿REPAYMENT_PATTERN,LATE_PAYMENT_SEVERITY,UNDERPAYMENT_SEVERITY,APPLICANTS,PCT_OF_TOTAL_APPLICANTS,SCORED_APPLICANTS,TARGET_1_COUNT,TARGET_1_RATE,AVG_RISK_SCORE
+Both issues,Elevated,Moderate,8178,2.6594,8178,736,8.9998,58.29
+Both issues,Moderate,Low,7638,2.4838,7635,623,8.1566,40.51
+Both issues,High,Moderate,1658,0.5392,1658,163,9.8311,67.74
+No history,No history,No history,15868,5.1601,0,949,5.9806,
+Both issues,Moderate,Moderate,14354,4.6678,14353,1229,8.5621,49.54
+Both issues,Elevated,Elevated,17611,5.7270,17610,1731,9.8291,67.43
+Late only,Moderate,None,9544,3.1036,9544,899,9.4195,32.76
+Both issues,Low,Low,18586,6.0440,18584,1233,6.6340,31.81
+Both issues,Low,Moderate,5921,1.9255,5921,460,7.7690,41.09
+Both issues,High,Low,555,0.1805,555,53,9.5495,59.21
+Both issues,High,Elevated,6615,2.1511,6615,718,10.8541,76.06
+Underpayment only,None,Moderate,791,0.2572,791,94,11.8837,32.46
+Both issues,Elevated,Low,2517,0.8185,2517,246,9.7735,49.25
+Late only,High,None,3573,1.1619,3572,423,11.8388,50.87
+Underpayment only,None,Elevated,176,0.0572,176,25,14.2045,41.25
+Both issues,Low,Elevated,132,0.0429,132,25,18.9394,47.88
+No observed payments,No observed payments,No observed payments,8,0.0026,0,1,12.5000,
+Underpayment only,None,High,31,0.0101,31,2,6.4516,48.55
+Underpayment only,None,Low,2091,0.6800,2091,166,7.9388,22.52
+Both issues,Elevated,High,6157,2.0022,6156,666,10.8170,76.48
+Both issues,High,High,25074,8.1539,25074,3142,12.5309,85.29
+Late only,Low,None,14181,4.6115,14181,962,6.7837,23.22
+Both issues,Moderate,High,21,0.0068,21,4,19.0476,64.88
+Both issues,Moderate,Elevated,7036,2.2880,7035,732,10.4036,59.01
+Late only,Elevated,None,5644,1.8354,5644,537,9.5145,41.57
+Neither issue,None,None,133547,43.4284,133545,9005,6.7429,15.37
+Both issues,Low,High,4,0.0013,4,1,25.0000,53.75
